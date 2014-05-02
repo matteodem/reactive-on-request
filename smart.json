@@ -1,0 +1,9 @@
+{
+  "name": "reactive-on-request",
+  "description": "Only reactively update when the visitor wants to",
+  "homepage": "",
+  "author": "",
+  "version": "0.6.0",
+  "git": "",
+  "packages": {}
+}
