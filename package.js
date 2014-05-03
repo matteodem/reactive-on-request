@@ -4,8 +4,12 @@ Package.describe({
 
 Package.on_use(function (api, where) {
   api.use(
-    ['coffeescript', 'minimongo', 'mongo-livedata', 'underscore', 'deps'],
+    ['coffeescript', 'minimongo', 'mongo-livedata',
+      'underscore', 'deps', 'templating', 'ui'],
     ['client', 'server']
   );
+
   api.add_files('reactive-on-request.coffee', ['client', 'server']);
+
+  api.add_files(['ror-components.html', 'ror-components.coffee'], 'client');
 });
