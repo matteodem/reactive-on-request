@@ -6,3 +6,10 @@ Template.ifRorRemovedDocuments.hasLess = () ->
     { 'howMany' : -@collection.rorGetDifference() }
 
 Template.ifRorHasChanged.hasChanged = () -> @collection.rorHasChanged()
+
+Template.rorTriggerButton.events(
+  'click button' : (e) ->
+    @collection.rorTrigger()
+    e.preventDefault()
+    return
+)
