@@ -12,7 +12,7 @@ package is for.
 
 ## Quick Intro
 
-Simply replace your ```find``` and ```findOne``` uses where reactive-on-request
+Simply replace your ``find`` and ``findOne`` uses where reactive-on-request
 should be used with following:
 
 ```javascript
@@ -39,7 +39,7 @@ reactivity or show that there were changes made to the document(s):
 {{/ifRorHasChanged}}
 ```
 
-The cursor in the above example would be the one that ```rorFind``` returns. If
-you would want to use the example for a single document define ```doc=yourDoc```
+The cursor in the above example would be the one that ``rorFind`` returns. If
+you would want to use the example for a single document define ``doc=yourDoc``
 instead of the cursor parameter. Also yourDoc would have to be the return value of
-```rorFindOne```.
+``rorFindOne``.
