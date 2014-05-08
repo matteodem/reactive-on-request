@@ -9,7 +9,6 @@ Package.on_use(function (api, where) {
     ['client', 'server']
   );
 
+  api.add_files('ror-components.html', 'client');
   api.add_files('reactive-on-request.coffee', ['client', 'server']);
-
-  api.add_files(['ror-components.html', 'ror-components.coffee'], 'client');
 });

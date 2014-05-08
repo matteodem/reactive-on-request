@@ -1,19 +1,7 @@
-<template name="ifRorNewDocuments">
-  {{#with hasNew}}
-    {{> UI.contentBlock this}}
-  {{/with}}
-</template>
-
-<template name="ifRorRemovedDocuments">
-  {{#with hasLess}}
-    {{> UI.contentBlock this}}
-  {{/with}}
-</template>
-
 <template name="ifRorHasChanged">
-  {{#if hasChanged}}
-    {{> UI.contentBlock}}
-  {{/if}}
+  {{#with difference}}
+    {{> UI.contentBlock this}}
+  {{/with}}
 </template>
 
 <template name="rorTriggerButton">
