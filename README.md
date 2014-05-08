@@ -1,7 +1,7 @@
 #Reactive on Request
 
 Imagine yourself reading through a comment. While you're still busy with reading,
-the comment suddenly disappear. The comment has been voted up which causes the
+the comment suddenly disappears. The comment has been voted up which causes the
 reactivity to push it to the top, since the sorting order is defined like that.
 
 Most of the time reactivity comes in handy but at times like this it would
