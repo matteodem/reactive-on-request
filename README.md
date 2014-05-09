@@ -40,6 +40,11 @@ Add Blaze Components to trigger the reactivity or show changes made to the doc(s
 
 The cursor in the above example would be the one that ```rorFind``` returns.
 
+## Example
+
+There's an example running on the meteor servers to show how reactive-on-request
+could improve user experience: http://ror.meteor.com/
+
 ## Using Blaze Components
 
 There are two blaze components which can be used to create the most common blocks.
@@ -61,7 +66,7 @@ Trigger the reactivity and show the newest set of data. Renders a ``<button>`` e
 * id (not required, the id of the button element)
 
 
-### Using the API
+## Using the API
 
 Whenever you think the Blaze Components don't provide enough information
 you can use the global ```ReactiveOnRequest``` Object to create custom behaviour.
