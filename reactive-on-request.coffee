@@ -1,4 +1,4 @@
-(() ->
+ReactiveOnRequest = (() ->
   # The Cache
   c = {}
 
@@ -118,4 +118,19 @@
       e.preventDefault()
       return
   )
+
+  return {
+    trigger : (el) ->
+      rorTrigger(c[el._id]) if el._id
+      id = generateCursorId(el)
+      rorTrigger(c[id]) if id?
+    getDifference : (el) ->
+      return 0 if el._id
+      id = generateCursorId(el)
+      rorGetDifference(c[id]) if id?
+    hasChanged : (el) ->
+      rorHasChanged(c[el._id]) if el._id
+      id = generateCursorId(el)
+      rorHasChanged(c[id]) if id?
+  }
 )()

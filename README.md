@@ -20,9 +20,8 @@ Collection.rorFind();
 Collection.rorFindOne();
 ```
 
-This will show you the first set of data that is retrieved by the server. Any further
-changes can be shown with the provided Blaze Components. Xou can trigger the
-reactivity or show that there were changes made to the document(s):
+Add Blaze Components to trigger the reactivity or show changes made to the doc(s).
+
 
 ```html
 {{#ifRorHasChanged cursor=comment}}
@@ -39,7 +38,45 @@ reactivity or show that there were changes made to the document(s):
 {{/ifRorHasChanged}}
 ```
 
-The cursor in the above example would be the one that ```rorFind``` returns. If
-you would want to use the example for a single document define ```doc=yourDoc```
-instead of the cursor parameter. Also yourDoc would have to be the return value of
-```rorFindOne```.
+The cursor in the above example would be the one that ```rorFind``` returns.
+
+## Using Blaze Components
+
+There are two blaze components which can be used to create the most common blocks.
+The example in the Quick Intro shows all of them.
+
+### ifRorHasChanged
+
+If the current document or documents have changed and you want to show it. You can
+use the ``difference`` in the ``this`` context to show more granular messages.
+* doc (required if no cursor parameter, the doc which rorFind returns)
+* cursor (required if no doc parameter, the cursor which rorFind returns)
+
+### rorTriggerButton
+
+Trigger the reactivity and show the newest set of data. Renders a ``<button>`` element.
+* doc (required if no cursor parameter, the doc which rorFind returns)
+* cursor (required if no doc parameter, the cursor which rorFind returns)
+* class (not required, the classes which the button have)
+* id (not required, the id of the button element)
+
+
+### Using the API
+
+Whenever you think the Blaze Components don't provide enough information
+you can use the global ```ReactiveOnRequest``` Object to create custom behaviour.
+
+For example:
+
+```javascript
+Template.example.events({
+  'hover #someButton' : () {
+    // Can either be the cursor or doc
+    ReactiveOnRequest.trigger(this.comment);
+  }
+});
+
+// There is also
+ReactiveOnRequest.hasChanged(cursorOrDoc);
+ReactiveOnRequest.getDifference(cursorOrDoc);
+```
