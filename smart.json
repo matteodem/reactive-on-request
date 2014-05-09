@@ -1,9 +1,9 @@
 {
   "name": "reactive-on-request",
   "description": "Only reactively update content when the visitor wants to",
-  "homepage": "",
-  "author": "",
+  "homepage": "http://matteodem.ch",
+  "author": "Matteo De Micheli",
   "version": "0.6.1",
-  "git": "",
+  "git": "https://github.com/matteodem/reactive-on-request.git",
   "packages": {}
 }
