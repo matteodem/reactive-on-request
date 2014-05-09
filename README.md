@@ -12,7 +12,7 @@ package is for.
 
 ## Quick Intro
 
-Simply replace your ```find``` and ```findOne``` uses where reactive-on-request
+Simply replace your ``find`` and ``findOne`` uses where reactive-on-request
 should be used with following:
 
 ```javascript
